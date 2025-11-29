@@ -3,7 +3,6 @@
     Student name: Gerardo Rodríguez Cuéllar 
     Student ID: 2530125
     Group: 1-1
-    GitHub repository URL: 
 """
 
 #                           EXECUTIVE SUMMARY
@@ -454,8 +453,8 @@ else:
     Working with strings is essential for handling user input 
     and producing clear output in programs.Methods like strip(), 
     lower(), split(), and join() help clean and organize text 
-    efficiently.Normalizing text before comparing prevents errors 
-    caused by extra spaces or different letter cases.Proper input 
+    efficiently. Normalizing text before comparing prevents errors 
+    caused by extra spaces or different letter cases. Proper input 
     validation avoids processing incorrect data and reduces unexpected 
     crashes. This work showed how strings are immutable, meaning 
     every modification creates a new string. Slicing is a powerful 

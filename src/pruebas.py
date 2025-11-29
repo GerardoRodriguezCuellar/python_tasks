@@ -1,32 +1,31 @@
-# Read product name
-product_name = input("Enter the product name: ")
+# Read values
+weight_text = input("Enter weight in kg: ")
+height_text = input("Enter height in meters: ")
 
-# Normalize product name
-cleaned_product_name = product_name.strip()
-
-# Validate product name
-if cleaned_product_name == "":
+# Validate and convert
+try:
+    weight_kg = float(weight_text)
+    height_m = float(height_text)
+except:
+    print()
     print("Error: invalid input")
-else:
-    # Read price (only if product name is valid)
-    price_value = input("Enter the price: ").strip()
+    exit()
 
-    # Validate and convert price
-    try:
-        price_number = float(price_value)
-        if price_number < 0:
-            print("Error: invalid input")
-        else:
-            # Build base label
-            label = f"Product: {cleaned_product_name} | Price: ${price_number}"
+if weight_kg <= 0 or height_m <= 0:
+    print()
+    print("Error: invalid input")
+    exit()
 
-            # Ensure length is exactly 30 characters
-            if len(label) > 30:
-                label = label[:30]
-            else:
-                label = label.ljust(30)
+# Calculate BMI
+bmi = weight_kg / (height_m * height_m)
 
-            # Output
-            print(f'Label: "{label}"')
-    except ValueError:
-        print("Error: invalid input")
+# Boolean flags
+is_underweight = bmi < 18.5
+is_normal = bmi >= 18.5 and bmi < 25
+is_overweight = bmi >= 25
+
+# Output
+print(f"BMI: {bmi}")
+print(f"Underweight: {is_underweight}")
+print(f"Normal: {is_normal}")
+print(f"Overweight: {is_overweight}")
