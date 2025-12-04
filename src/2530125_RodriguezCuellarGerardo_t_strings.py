@@ -1,5 +1,6 @@
 #                               TITLE PAGE
 """
+    Title: String manipulation in Python
     Student name: Gerardo Rodríguez Cuéllar 
     Student ID: 2530125
     Group: 1-1
@@ -61,9 +62,25 @@
     - Input must not be only spaces.
 
     Test cases:
-    1) Normal: "juan carlos tovar"
-    2) Border: "Ana Maria"
-    3) Error: " " (only spaces)
+    1) Normal: 
+    Input:
+    "juan carlos tovar"
+    Output:
+    Formatted name: Juan Carlos Tovar
+    Initials: J.C.T.
+
+    2) Border: 
+    Input:
+    "Ana Maria"
+    Output:
+    Formatted name: Ana Maria
+    Initials: A.M.
+
+    3) Error: 
+    Input:
+    " " 
+    Output:
+    Error: invalid input (empty name)
 """
 
 print()
@@ -122,9 +139,24 @@ print("------------------------------------------------------------------")
     - After '@' there must be at least one '.'.
 
     Test cases:
-    1) Normal: "tilinsito@email.com"
-    2) Border: "a@b.co"
-    3) Error: "tilinsito@@mail.com" (two '@')
+    1) Normal: 
+    Input:
+    "tilinsito@email.com"
+    Output:
+    Valid email: true
+    Domain: email.com
+    
+    2) Border: 
+    Input:
+    "a@b.co"
+    Valid email: true
+    Domain: b.co
+
+    3) Error: 
+    Input:
+    "tilinsito@@mail.com" (two '@')
+    Output:
+    Valid email: false
 """
 
 print()
@@ -190,9 +222,23 @@ print("------------------------------------------------------------------")
     - After removing spaces, length must be >= 3.
 
     Test cases:
-    1) Normal: "Yo hago yoga hoy"
-    2) Border: "Aba"
-    3) Error: " " (only spaces)
+    1) Normal: 
+    Input:
+    "Yo hago yoga hoy"
+    Output:
+    Is palindrome: true
+
+    2) Border: 
+    Input:
+    "Aba"
+    Output:
+    Is palindrome: true
+
+    3) Error: 
+    Input:
+    " " 
+    Output:
+    Is palindrome: false
 """
 
 print()
@@ -255,9 +301,32 @@ print("------------------------------------------------------------------")
     - After splitting, there must be at least one valid word.
 
     Test cases:
-    1) Normal: "  This is an example sentence.  "
-    2) Border: "Star"  (single-word sentence)
-    3) Error: "    "    (only spaces)
+    1) Normal: 
+    Input:
+    "  This is an example sentence.  "
+    Output:
+    Word count: 5
+    First word: This
+    Last word: sentence.
+    Shortest word: is
+    Longest word: sentence.
+        
+    2) Border: 
+    Input:
+    "Star" 
+    Output:
+    Word count: 1
+    First word: Star
+    Last word: Star
+    Shortest word: Star
+    Longest word: Star
+
+    3) Error: 
+    Input:
+    "    "
+    Output:
+    Error: invalid input
+
 """
 
 print()
@@ -327,9 +396,24 @@ print("------------------------------------------------------------------")
     - Length must be checked using len().
 
     Test cases:
-    1) Normal: "Primobs12345!@" → strong
-    2) Border: "Primobs12345" → medium
-    3) Error: "" (empty string)
+    1) Normal: 
+    Input:
+    "Primobs12345!@"  
+    Output:
+    Password strength: strong
+
+    2) Border: 
+    Input:
+    "Primobs12345" 
+    Output:
+    Password strength: medium
+
+    3) Error: 
+    Input:
+    "" 
+    Output:
+    Error: invalid input
+
 """
 
 print()
@@ -403,9 +487,24 @@ print("------------------------------------------------------------------")
     - price_value must be convertible to a positive number.
 
     Test cases:
-    1) Normal: ("Notebook", 25)
-    2) Border: ("A", 0.01)
-    3) Error: ("", "abc")
+    1) Normal: 
+    Input:
+    ("Notebook", 25)
+    Output:
+    Label: "Product: Notebook | Price: $25"
+
+    2) Border: 
+    Input:
+    ("A", 0.01)
+    Output:
+    Label: "Product: A | Price: $0.01
+
+    3) Error: 
+    Input:
+    ("", "abc")
+    Output:
+    Error: invalid input
+
 """
 
 print()

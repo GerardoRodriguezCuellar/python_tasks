@@ -1,31 +1,34 @@
-# Read values
-weight_text = input("Enter weight in kg: ")
-height_text = input("Enter height in meters: ")
+n_text = input("Enter number of rows: ")
 
-# Validate and convert
+# Validate input
 try:
-    weight_kg = float(weight_text)
-    height_m = float(height_text)
+    n = int(n_text)
 except:
     print()
     print("Error: invalid input")
     exit()
 
-if weight_kg <= 0 or height_m <= 0:
+if n < 1:
     print()
     print("Error: invalid input")
     exit()
 
-# Calculate BMI
-bmi = weight_kg / (height_m * height_m)
+# Normal pattern
+print()
+print("Triangle:")
+print()
+for i in range(1, n + 1):
+    line = ""
+    for j in range(i):
+        line = line + "*"
+    print(line)
 
-# Boolean flags
-is_underweight = bmi < 18.5
-is_normal = bmi >= 18.5 and bmi < 25
-is_overweight = bmi >= 25
-
-# Output
-print(f"BMI: {bmi}")
-print(f"Underweight: {is_underweight}")
-print(f"Normal: {is_normal}")
-print(f"Overweight: {is_overweight}")
+# Inverted pattern (optional extension)
+print()
+print("Inverted triangle:")
+print()
+for i in range(n, 0, -1):
+    line = ""
+    for j in range(i):
+        line = line + "*"
+    print(line)

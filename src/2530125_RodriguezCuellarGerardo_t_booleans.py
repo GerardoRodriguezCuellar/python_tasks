@@ -1,5 +1,6 @@
 #                               TITLE PAGE
 """
+    Title: Handling numbers and booleans in Python
     Student name: Gerardo Rodríguez Cuéllar 
     Student ID: 2530125
     Group: 1-1
@@ -287,7 +288,7 @@ if is_student_text != "YES" and is_student_text != "NO":
     print("Error: invalid input")
     exit()
 
-f is_senior_text != "YES" and is_senior_text != "NO":
+if is_senior_text != "YES" and is_senior_text != "NO":
     print("Error: invalid input")
     exit()
 
